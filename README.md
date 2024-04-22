@@ -2,11 +2,6 @@
 
 project_history is a Bash script designed to help users track file modifications within a specified directory. This tool is particularly useful in environments where files are frequently changed, such as development projects. It allows users to identify recently modified files quickly, highlighting those that have changed since a specified reference date.
 
-Features
-Color-Coded Output: Files modified since the reference date are highlighted in red, files modified within the last month are shown in green, and older files are displayed in white.
-Customizable Date Filtering: Users can specify a date to filter the modifications.
-Exclusion of Hidden Directories: The script automatically excludes hidden directories (e.g., .git) to focus on the main content.
-
 ## Features
 
 - Color-Coded Output: Files modified since the reference date are highlighted in red, files modified within the last month are shown in green, and older files are displayed in white.
