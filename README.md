@@ -4,9 +4,9 @@ project_history is a Bash script designed to help users track file modifications
 
 ## Features
 
-- Color-Coded Output: Files modified since the reference date are highlighted in red, files modified within the last month are shown in green, and older files are displayed in white.
-- Customizable Date Filtering: Users can specify a date to filter the modifications.
-- Exclusion of Hidden Directories: The script automatically excludes hidden directories (e.g., .git) to focus on the main content.
+- Color-Coded Output: Files modified since the reference date are highlighted in red to indicate recent changes, and all other files are displayed in white for standard visibility.
+- Customizable Date Filtering: Users can enter a specific reference date to filter modifications. Files modified after this date are considered "recent" and are highlighted.
+- Exclusion of Hidden Directories: The script automatically excludes hidden directories (like those starting with '.') to ensure only relevant content is processed. This feature helps users to focus on the main files without the clutter from system or hidden files.
 
 ## Requirements
 
@@ -31,15 +31,14 @@ $ ./project_history.sh
 
 ```bash
 Recently modified files in the specified directory and its subdirectories (excluding directories starting with .), sorted by oldest first:
-Type       Permissions  Size  Date         Time     Name
--rw-r--r-- 644          14K   2023-09-16   14:33    example/.vercelignore
--rw-r--r-- 644          79B   2023-09-24   01:30    example/.vercel.json
--rw-r--r-- 644          23B   2023-10-09   11:52    src/robots.txt
--rw-r--r-- 644          479K  2023-10-15   00:26    src/public/favicon.png
--rw-r--r-- 644          43K   2023-11-04   12:04    src/assets/img/moon.png
+Permissions  Size  Date        Time    Name
+-rw-r--r-- 644    2023-09-16   14:33    example/.vercelignore
+-rw-r--r-- 644    2023-09-24   01:30    example/.vercel.json
+-rw-r--r-- 644    2023-10-09   11:52    src/robots.txt
+-rw-r--r-- 644    2023-10-15   00:26    src/public/favicon.png
+-rw-r--r-- 644    2023-11-04   12:04    src/assets/img/moon.png
 ```
 
-- Type: Shows the type of file.
 - Permissions: Displays the file permissions.
 - Size: Indicates the file size.
 - Date and Time: Shows the last modification date and time.
