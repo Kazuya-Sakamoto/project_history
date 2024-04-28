@@ -1,23 +1,23 @@
 #!/bin/bash
 
 prompt_for_directory() {
-  echo "Enter the directory path (example: /Users/username/project):"
-  read DIRECTORY
+  echo "Please enter the full path to the directory you wish to analyze (e.g., /Users/username/project)"
+  read -r DIRECTORY
   if [ ! -d "$DIRECTORY" ]; then
-    echo "The specified directory does not exist."
+    echo "Error: The specified directory does not exist. Please check the path and try again."
     exit 1
   fi
 }
 
 prompt_for_reference_date() {
-  echo "Enter the reference date (YYYY-MM-DD) (example: 2024-01-01):"
-  read REF_DATE
+  echo "Please enter the reference date in YYYY-MM-DD format (e.g., 2024-01-01):"
+  read -r REF_DATE
   ref_epoch=$(date -jf "%Y-%m-%d" "$REF_DATE" +%s)
   current_epoch=$(date +%s)
 }
 
 list_recently_modified_files() {
-  echo "Recently modified files in $DIRECTORY and its subdirectories (excluding directories starting with .), sorted by oldest first:"
+  echo "Listing files in '$DIRECTORY' and its visible subdirectories that have been modified, displayed from the oldest to the most recent:"
   find "$DIRECTORY" -type f -not -path "*/.*/*" -print0 |
     xargs -0 stat -f "%m %N" |
     sort -n |
