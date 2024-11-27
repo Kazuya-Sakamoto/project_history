@@ -1,5 +1,12 @@
 # project_history
 
+<div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+  <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
+  <img src="https://img.shields.io/badge/Shell%20Script-Bash-121011?logo=gnu-bash&logoColor=white" alt="Shell Script">
+</div>
+
+<br />
+
 project_history is a Bash script designed to help users track file modifications within a specified directory. This tool is particularly useful in environments where files are frequently changed, such as development projects. It allows users to identify recently modified files quickly, highlighting those that have changed since a specified reference date.
 
 ## Features
